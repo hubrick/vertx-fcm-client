@@ -17,6 +17,7 @@ package com.hubrick.vertx.fcm.model.request;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.common.base.Preconditions;
+import com.hubrick.vertx.fcm.model.common.MessagePriority;
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -36,7 +37,7 @@ public class SendMessageRequest {
     @JsonProperty("collapse_key")
     private String collapseKey;
 
-    private String priority;
+    private MessagePriority priority;
 
     @JsonProperty("content_available")
     private Boolean contentAvailable;
@@ -86,11 +87,11 @@ public class SendMessageRequest {
         this.collapseKey = collapseKey;
     }
 
-    public String getPriority() {
+    public MessagePriority getPriority() {
         return priority;
     }
 
-    public void setPriority(final String priority) {
+    public void setPriority(final MessagePriority priority) {
         this.priority = priority;
     }
 
